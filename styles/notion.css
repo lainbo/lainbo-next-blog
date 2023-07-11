@@ -2026,3 +2026,7 @@ code.language-mermaid {
 .notion-equation-inline .katex-display {
   margin: 0 0 !important;
 }
+
+.font-light {
+  font-weight: 400 !important;
+}

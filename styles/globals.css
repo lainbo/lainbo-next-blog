@@ -348,7 +348,3 @@ a.avatar-wrapper {
 .notion-external-image > svg > g > path{
   @apply dark:fill-gray-200 !important;
 }
-
-.font-light {
-  font-weight: 400 !important;
-}
