@@ -38,16 +38,16 @@ const BLOG = {
   FONT_STYLE: process.env.NEXT_PUBLIC_FONT_STYLE || 'font-sans', // ['font-serif','font-sans'] 两种可选，分别是衬线和无衬线: 参考 https://www.jianshu.com/p/55e410bd2115
   FONT_URL: [
     // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
-    'https://s1.hdslb.com/bfs/static/jinkela/long/font/medium.css',
+    'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
     'https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
   FONT_SANS: [
     // 无衬线字体 例如'LXGW WenKai'
-    '"HarmonyOS Sans SC Medium"',
-    '"HarmonyOS_Medium"',
-    '-apple-system',
+    '"HarmonyOS Sans SC"',
+    '"HarmonyOS_Regular"',
+    'system-ui',
     'BlinkMacSystemFont',
     '"Hiragino Sans GB"',
     '"Segoe UI Emoji"',
@@ -97,7 +97,7 @@ const BLOG = {
       'https://npm.elemecdn.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js',
   PRISM_JS_PATH: 'https://npm.elemecdn.com/prismjs@1.29.0/components/',
   PRISM_THEME_PATH:
-      'https://npm.elemecdn.com/prism-themes/themes/prism-a11y-dark.min.css', // 代码样式主题 更多参考 https://github.com/PrismJS/prism-themes
+      'https://npm.elemecdn.com/prism-themes/themes/prism-atom-dark.min.css', // 代码样式主题 更多参考 https://github.com/PrismJS/prism-themes
   CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // 代码左上角显示mac的红黄绿图标
   CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || 'false', // 是否显示行号
 
