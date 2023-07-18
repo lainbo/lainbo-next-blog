@@ -2051,38 +2051,3 @@ code.language-mermaid {
 .notion-simple-table td{
   border: 1px solid var(#eee) !important
 }
-
-.notion-external-title {
-  @apply dark:text-white !important;
-}
-
-.notion-external-subtitle {
-  @apply dark:text-gray-400 !important;
-}
-
-.notion-external-block {
-  @apply dark:border-gray-200 !important;
-}
-
-.notion-external-image > svg > g > path{
-  @apply dark:fill-gray-200 !important;
-}
-
-.notion-external-image {
-  @apply w-6 h-6 mx-3 my-2 !important;
-}
-
-/* 表格 #f5f6f8*/
-.notion-simple-table-row {
-}
-
-/* 表格头 */
-.notion-simple-table tr:first-child td{
-  background-color: #f5f6f8;
-  @apply text-center font-bold dark:bg-gray-800 !important;
-
-}
-
-.notion-simple-table td{
-  border: 1px solid var(#eee) !important
-}
