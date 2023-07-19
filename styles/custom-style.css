@@ -1,13 +1,19 @@
+/* ==========字重========== */
 .font-light {
   font-weight: 400 !important;
 }
 
+/* ==========字体========== */
 .notion-inline-code,
 .notion-code,
 code[class*='language-'] {
   font-family: 'JetBrains Mono', 'Cascadia Mono', Menlo, Monaco, Consolas,
-  'HarmonyOS Sans SC Medium', 'HarmonyOS_Medium' !important;
-  font-size: 14px !important;
+  'HarmonyOS Sans SC Medium', 'HarmonyOS_Regular' !important;
+}
+
+/* ==========字体尺寸========== */
+.notion-code {
+  font-size: 90% !important;
 }
 
 code[class*='language-'] {
