@@ -754,9 +754,6 @@ pre[class*='language-'] {
 
 code[class*='language-'] {
   background: unset !important;
-  font-family: 'JetBrains Mono', 'Cascadia Mono', Menlo, Monaco, Consolas,
-  'HarmonyOS Sans SC Medium', 'HarmonyOS_Medium' !important;
-  font-size: 14px !important;
 }
 
 .notion-code {
@@ -2016,10 +2013,6 @@ code.language-mermaid {
   margin: 0 0 !important;
 }
 
-.font-light {
-  font-weight: 400 !important;
-}
-
 .notion-external-title {
   @apply dark:text-white !important;
 }
@@ -2053,4 +2046,9 @@ code.language-mermaid {
 
 .notion-simple-table td{
   border: 1px solid var(#eee) !important
+}
+
+/* 竖屏视频高度bug */
+figure.notion-asset-wrapper.notion-asset-wrapper-video>div {
+    height: 100% !important;
 }

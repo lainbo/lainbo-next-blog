@@ -1,0 +1,15 @@
+.font-light {
+  font-weight: 400 !important;
+}
+
+.notion-inline-code,
+.notion-code,
+code[class*='language-'] {
+  font-family: 'JetBrains Mono', 'Cascadia Mono', Menlo, Monaco, Consolas,
+  'HarmonyOS Sans SC Medium', 'HarmonyOS_Medium' !important;
+  font-size: 14px !important;
+}
+
+code[class*='language-'] {
+  font-size: 14px !important;
+}
