@@ -12,10 +12,17 @@ code[class*='language-'] {
 }
 
 /* ==========字体尺寸========== */
-.notion-code {
+.notion-code,
+.notion-inline-code {
   font-size: 90% !important;
 }
 
 code[class*='language-'] {
   font-size: 14px !important;
+}
+
+/* ==========行高========== */
+code[class*=language-],
+pre[class*=language-] {
+  line-height: 1.625 !important;
 }
