@@ -755,7 +755,8 @@ pre[class*='language-'] {
 code[class*='language-'] {
   background: unset !important;
   font-family: 'JetBrains Mono', 'Cascadia Mono', Menlo, Monaco, Consolas,
-  'HarmonyOS Sans SC Medium', 'HarmonyOS_Medium';
+  'HarmonyOS Sans SC Medium', 'HarmonyOS_Medium' !important;
+  font-size: 14px !important;
 }
 
 .notion-code {
