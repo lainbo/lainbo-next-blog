@@ -8,7 +8,7 @@ import '@/styles/utility-patterns.css'
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
 import '@/styles/notion.css' //  重写部分样式
-import '@/styles/customStyle.css' //  重写部分样式
+import '@/styles/custom-style.css' //  重写部分样式
 
 import { GlobalContextProvider } from '@/lib/global'
 
