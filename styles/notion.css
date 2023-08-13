@@ -820,7 +820,7 @@ code[class*='language-'] {
   border-radius: 3px;
   display: flex;
   overflow: hidden;
-  user-select: none;
+  user-select: default;
 }
 
 .notion-bookmark > div:first-child {
@@ -1127,7 +1127,7 @@ code[class*='language-'] {
 
 .notion-table-of-contents-item {
   text-decoration: none;
-  user-select: none;
+  user-select: default;
   transition: background 20ms ease-in 0s;
   cursor: pointer;
   width: 100%;
@@ -1207,7 +1207,7 @@ code[class*='language-'] {
   border: 1px solid var(--fg-color-1);
   border-radius: 3px;
 
-  user-select: none;
+  user-select: default;
   transition: background 20ms ease-in 0s;
   cursor: pointer;
 }
@@ -1352,7 +1352,7 @@ code[class*='language-'] {
   display: inline-flex;
   color: inherit;
   fill: inherit;
-  user-select: none;
+  user-select: default;
   border-radius: 3px;
   transition: background 20ms ease-in 0s;
   text-align: center;
@@ -1852,7 +1852,7 @@ svg + .notion-page-title-text {
 }
 
 .notion-table-view-header-cell-inner {
-  user-select: none;
+  user-select: default;
   display: flex;
   width: 100%;
   height: 100%;
