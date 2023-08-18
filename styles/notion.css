@@ -66,6 +66,10 @@
   --notion-max-width: 720px;
   --notion-header-height: 45px;
 }
+::selection {
+  background: #6168fc;
+  color: #fff;
+}
 
 .notion {
   font-size: 16px;
