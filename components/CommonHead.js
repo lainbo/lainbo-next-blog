@@ -32,13 +32,14 @@ const CommonHead = ({ meta, children }) => {
                 <link href={BLOG.COMMENT_WEBMENTION.AUTH} rel="me" />
             )}
           {/* 预加载字体 */}
-
+          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
           {BLOG.FONT_URL?.map((fontUrl, index) => {
-            if (fontUrl.endsWith('.css')) {
-              return <link key={index} rel="stylesheet" href={fontUrl} />
-            } else {
-              return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
-            }
+            // if (fontUrl.endsWith('.css')) {
+            return <link key={index} rel="stylesheet" href={fontUrl} />
+            // } else {
+            //   return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
+            // }
           })}
             {BLOG.FONT_AWESOME && <>
                 <link href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
