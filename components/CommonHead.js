@@ -20,7 +20,7 @@ const CommonHead = ({ meta, children }) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
             <meta charSet="UTF-8" />
             <title>{title}</title>
-            <meta name="robots" content="follow, index" />
+
             {BLOG.COMMENT_WEBMENTION.ENABLE && (
                 <>
                     <link rel="webmention" href={`https://webmention.io/${BLOG.COMMENT_WEBMENTION.HOSTNAME}/webmention`} />
@@ -31,6 +31,19 @@ const CommonHead = ({ meta, children }) => {
             {BLOG.COMMENT_WEBMENTION.ENABLE && BLOG.COMMENT_WEBMENTION.AUTH !== '' && (
                 <link href={BLOG.COMMENT_WEBMENTION.AUTH} rel="me" />
             )}
+            {/* 预加载字体 */}
+            {BLOG.FONT_AWESOME && <>
+                <link rel='preload' href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
+                <link rel="stylesheet" href={BLOG.FONT_AWESOME} crossOrigin="anonymous" referrerPolicy="no-referrer" />
+            </>}
+
+            {BLOG.FONT_URL?.map((fontUrl, index) => {
+              if (fontUrl.endsWith('.css')) {
+                return <link key={index} rel="stylesheet" href={fontUrl} />
+              } else {
+                return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
+              }
+            })}
             {BLOG.SEO_GOOGLE_SITE_VERIFICATION && (
                 <meta
                     name="google-site-verification"
@@ -38,6 +51,7 @@ const CommonHead = ({ meta, children }) => {
                 />
             )}
             {BLOG.SEO_BAIDU_SITE_VERIFICATION && (<meta name="baidu-site-verification" content={BLOG.SEO_BAIDU_SITE_VERIFICATION} />)}
+            <meta name="robots" content="follow, index" />
             <meta name="keywords" content={keywords} />
             <meta name="description" content={description} />
             <meta property="og:locale" content={lang} />
