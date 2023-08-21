@@ -31,19 +31,20 @@ const CommonHead = ({ meta, children }) => {
             {BLOG.COMMENT_WEBMENTION.ENABLE && BLOG.COMMENT_WEBMENTION.AUTH !== '' && (
                 <link href={BLOG.COMMENT_WEBMENTION.AUTH} rel="me" />
             )}
-            {/* 预加载字体 */}
+          {/* 预加载字体 */}
+
+          {BLOG.FONT_URL?.map((fontUrl, index) => {
+            if (fontUrl.endsWith('.css')) {
+              return <link key={index} rel="stylesheet" href={fontUrl} />
+            } else {
+              return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
+            }
+          })}
             {BLOG.FONT_AWESOME && <>
-                <link rel='preload' href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
+                <link href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
                 <link rel="stylesheet" href={BLOG.FONT_AWESOME} crossOrigin="anonymous" referrerPolicy="no-referrer" />
             </>}
 
-            {BLOG.FONT_URL?.map((fontUrl, index) => {
-              if (fontUrl.endsWith('.css')) {
-                return <link key={index} rel="stylesheet" href={fontUrl} />
-              } else {
-                return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
-              }
-            })}
             {BLOG.SEO_GOOGLE_SITE_VERIFICATION && (
                 <meta
                     name="google-site-verification"
