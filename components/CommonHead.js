@@ -20,8 +20,8 @@ const CommonHead = ({ meta, children }) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
             <meta charSet="UTF-8" />
             <title>{title}</title>
-          <meta name="robots" content="follow, index" />
-          {BLOG.COMMENT_WEBMENTION.ENABLE && (
+            <meta name="robots" content="follow, index" />
+            {BLOG.COMMENT_WEBMENTION.ENABLE && (
                 <>
                     <link rel="webmention" href={`https://webmention.io/${BLOG.COMMENT_WEBMENTION.HOSTNAME}/webmention`} />
                     <link rel="pingback" href={`https://webmention.io/${BLOG.COMMENT_WEBMENTION.HOSTNAME}/xmlrpc`} />
