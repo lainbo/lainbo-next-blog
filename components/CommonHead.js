@@ -31,7 +31,7 @@ const CommonHead = ({ meta, children }) => {
             {BLOG.COMMENT_WEBMENTION.ENABLE && BLOG.COMMENT_WEBMENTION.AUTH !== '' && (
                 <link href={BLOG.COMMENT_WEBMENTION.AUTH} rel="me" />
             )}
-          {/* 预加载字体 */}
+          {/* 加载字体 */}
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
           {BLOG.FONT_URL?.map((fontUrl, index) => {
