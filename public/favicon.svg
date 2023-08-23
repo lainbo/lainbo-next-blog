@@ -10,10 +10,10 @@
 	
 		<radialGradient id="SVGID_1_" cx="302.0055" cy="212.1111" r="405.4079" gradientTransform="matrix(1.7067 0 0 -1.7067 -1.3369 873.8134)" gradientUnits="userSpaceOnUse">
 		<stop  offset="0" style="stop-color:#FFFFFF"/>
-		<stop  offset="0.3056" style="stop-color:#FBFCFD"/>
-		<stop  offset="0.6101" style="stop-color:#EFF1F5"/>
-		<stop  offset="0.9132" style="stop-color:#DBE0E9"/>
-		<stop  offset="1" style="stop-color:#D4DAE5"/>
+		<stop  offset="0.3092" style="stop-color:#FBFCFF"/>
+		<stop  offset="0.6173" style="stop-color:#EFF4FF"/>
+		<stop  offset="0.9241" style="stop-color:#DBE7FE"/>
+		<stop  offset="1" style="stop-color:#D5E3FE"/>
 	</radialGradient>
 	<rect class="st0" width="512" height="512"/>
 </g>
