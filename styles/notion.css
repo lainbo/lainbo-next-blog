@@ -15,7 +15,7 @@
   --bg-color-2: rgba(135, 131, 120, 0.15);
 
   --select-color-0: rgb(46, 170, 220);
-  --select-color-1: #6168fc;
+  --select-color-1: #165dff;
   --select-color-2: #ffffff;
 
   --notion-red: rgb(224, 62, 62);
@@ -67,7 +67,7 @@
   --notion-header-height: 45px;
 }
 ::selection {
-  background: #6168fc;
+  background: #165dff;
   color: #fff;
 }
 
