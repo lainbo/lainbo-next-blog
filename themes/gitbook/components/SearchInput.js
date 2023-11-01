@@ -111,7 +111,7 @@ const SearchInput = ({ currentSearch, cRef, className }) => {
     </div>
 
     {(showClean &&
-      <div className='-ml-12 cursor-pointer float-right items-center justify-center py-2'>
+      <div className='flex -ml-12 cursor-pointer float-right items-center justify-center py-2'>
         <i className='fas fa-times hover:text-black transform duration-200 text-gray-400 cursor-pointer   dark:hover:text-gray-300' onClick={cleanSearch} />
       </div>
       )}
