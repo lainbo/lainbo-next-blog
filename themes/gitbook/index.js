@@ -99,10 +99,7 @@ const LayoutBase = (props) => {
                                 show={!onLoading}
                                 appear={true}
                                 enter="transition ease-in-out duration-700 transform order-first"
-                                enterFrom="translate-y-16"
                                 leave="transition ease-in-out duration-300 transform"
-                                leaveFrom="translate-y-0"
-                                leaveTo="-translate-y-16"
                                 unmount={false}
                             >
                                 {children}
