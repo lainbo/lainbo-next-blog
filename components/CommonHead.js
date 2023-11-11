@@ -20,34 +20,8 @@ const CommonHead = ({ meta, children }) => {
             <title>{title}</title>
             <meta name="theme-color" content={siteConfig('BACKGROUND_DARK')} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+            <meta name="robots" content="follow, index" />
             <meta charSet="UTF-8" />
-            <title>{title}</title>
-
-            {BLOG.COMMENT_WEBMENTION.ENABLE && (
-                <>
-                    <link rel="webmention" href={`https://webmention.io/${BLOG.COMMENT_WEBMENTION.HOSTNAME}/webmention`} />
-                    <link rel="pingback" href={`https://webmention.io/${BLOG.COMMENT_WEBMENTION.HOSTNAME}/xmlrpc`} />
-                </>
-            )}
-
-            {BLOG.COMMENT_WEBMENTION.ENABLE && BLOG.COMMENT_WEBMENTION.AUTH !== '' && (
-                <link href={BLOG.COMMENT_WEBMENTION.AUTH} rel="me" />
-            )}
-          {/* 加载字体 */}
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          {BLOG.FONT_URL?.map((fontUrl, index) => {
-            // if (fontUrl.endsWith('.css')) {
-            return <link key={index} rel="stylesheet" href={fontUrl} />
-            // } else {
-            //   return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
-            // }
-          })}
-            {BLOG.FONT_AWESOME && <>
-                <link href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
-                <link rel="stylesheet" href={BLOG.FONT_AWESOME} crossOrigin="anonymous" referrerPolicy="no-referrer" />
-            </>}
-
             {siteConfig('SEO_GOOGLE_SITE_VERIFICATION') && (
                 <meta
                     name="google-site-verification"
@@ -55,7 +29,6 @@ const CommonHead = ({ meta, children }) => {
                 />
             )}
             {siteConfig('SEO_BAIDU_SITE_VERIFICATION') && (<meta name="baidu-site-verification" content={siteConfig('SEO_BAIDU_SITE_VERIFICATION')} />)}
-            <meta name="robots" content="follow, index" />
             <meta name="keywords" content={keywords} />
             <meta name="description" content={description} />
             <meta property="og:locale" content={lang} />
