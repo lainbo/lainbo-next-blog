@@ -109,8 +109,6 @@ const LayoutBase = (props) => {
                             <AdSlot type='in-article' />
                             <WWAds className='w-full' orientation='horizontal'/>
 
-                            {/* 回顶按钮 */}
-                            <JumpToTopButton />
                         </div>
 
                         {/* 底部 */}
@@ -141,6 +139,9 @@ const LayoutBase = (props) => {
 
                         </div>
                     </div>
+
+                    {/* 回顶按钮 */}
+                    <JumpToTopButton />
 
                 </main>
 
