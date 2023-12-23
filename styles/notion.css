@@ -1,4 +1,7 @@
 :root {
+  --c-scrollbar:#c9cdd4;
+  --c-scrollbar-hover:#86909c;
+
   --fg-color: rgb(34, 34, 34);
   --fg-color-0: rgba(55, 53, 47, 0.09);
   --fg-color-1: rgba(55, 53, 47, 0.16);
@@ -69,6 +72,10 @@
 html {
   scrollbar-gutter: stable;
 }
+html.dark {
+  --c-scrollbar:#5f5f60;
+  --c-scrollbar-hover:#929293;
+}
 
 ::selection {
   background: #3b82f6;
@@ -83,24 +90,21 @@ html {
   height: 8px;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
   border-radius: 4px;
   border-width: 0;
-
-  @apply bg-[#c9cdd4] dark:bg-[#5f5f60];
+  background: var(--c-scrollbar);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-[#86909c] dark:bg-[#929293];
+  background: var(--c-scrollbar-hover);
 }
 
-::-webkit-scrollbar-track-piece {
+/* ::-webkit-scrollbar-track-piece {
   @apply bg-[#fff] dark:bg-[#272728];
-}
+} */
 
-::-webkit-scrollbar-corner {
-  @apply bg-transparent;
-}
 
 .notion {
   font-size: 16px;
