@@ -70,6 +70,12 @@
   background: #3b82f6;
   color: #fff;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   border-width: 0;
