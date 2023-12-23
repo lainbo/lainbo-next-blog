@@ -1,6 +1,7 @@
 :root {
   --c-scrollbar:#c9cdd4;
   --c-scrollbar-hover:#86909c;
+  --c-scrollbar-track-piece:#fff;
 
   --fg-color: rgb(34, 34, 34);
   --fg-color-0: rgba(55, 53, 47, 0.09);
@@ -75,6 +76,7 @@ html {
 html.dark {
   --c-scrollbar:#5f5f60;
   --c-scrollbar-hover:#929293;
+  --c-scrollbar-track-piece:#101414;
 }
 
 ::selection {
@@ -101,9 +103,9 @@ html.dark {
   background: var(--c-scrollbar-hover);
 }
 
-/* ::-webkit-scrollbar-track-piece {
-  @apply bg-[#fff] dark:bg-[#272728];
-} */
+::-webkit-scrollbar-track-piece {
+  background: var(--c-scrollbar-track-piece);
+}
 
 
 .notion {
