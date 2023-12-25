@@ -1179,6 +1179,7 @@ code[class*='language-'] {
   display: flex;
   align-items: center;
 
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   @apply dark:text-white
