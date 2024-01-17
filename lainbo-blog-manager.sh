@@ -6,7 +6,7 @@ PROJECT_NAME="lainbo-blog"
 function rebuild_and_start {
     echo "正在重新构建并启动 $PROJECT_NAME..."
     yarn build
-    pm2 start yarn --name "$PROJECT_NAME" -- start --log-date-format 'YYYY-MM-DD HH:mm:ss'
+    pm2 start yarn --name "$PROJECT_NAME" -- start
 }
 
 function stop_and_delete {
