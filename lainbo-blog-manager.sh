@@ -20,7 +20,7 @@ cd "$PROJECT_PATH"
 echo "请选择要执行的操作："
 echo "0) 退出脚本"
 echo "1) 重新构建并启动 $PROJECT_NAME"
-echo "2) 拉取代码，构建并启动 $PROJECT_NAME"
+echo "2) 拉取代码, 构建并启动 $PROJECT_NAME"
 echo "3) 停止并删除 $PROJECT_NAME"
 read -p "输入选择 (0/1/2/3) : " choice
 
@@ -40,7 +40,7 @@ case $choice in
     if git pull; then
         echo "代码拉取成功."
     else
-        echo "代码拉取失败，脚本终止."
+        echo "代码拉取失败, 脚本终止."
         exit 1
     fi
     ;;
