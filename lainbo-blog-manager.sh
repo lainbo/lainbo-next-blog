@@ -18,16 +18,21 @@ function stop_and_delete {
 cd "$PROJECT_PATH"
 
 echo "请选择要执行的操作："
+echo "0) 退出脚本"
 echo "1) 重新构建并启动 $PROJECT_NAME"
 echo "2) 拉取代码，构建并启动 $PROJECT_NAME"
 echo "3) 停止并删除 $PROJECT_NAME"
-read -p "输入选择（1/2/3）: " choice
+read -p "输入选择 (0/1/2/3) : " choice
 
 # 检查 $PROJECT_NAME 是否在运行
 pm2 describe "$PROJECT_NAME" > /dev/null
 RUNNING=$?
 
 case $choice in
+  0)
+    echo "正在退出脚本..."
+    exit 0
+    ;;
   1)
     ;;
   2)
