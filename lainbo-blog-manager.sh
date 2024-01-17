@@ -18,11 +18,11 @@ function stop_and_delete {
 cd "$PROJECT_PATH"
 
 echo "请选择要执行的操作："
-echo "0) 退出脚本"
 echo "1) 重新构建并启动 $PROJECT_NAME"
-echo "2) 拉取代码, 构建并启动 $PROJECT_NAME"
-echo "3) 停止并删除 $PROJECT_NAME"
-read -p "输入选择 (0/1/2/3) : " choice
+echo "2) 拉取代码, 再执行`1)` $PROJECT_NAME"
+echo "3) 停止并删除PM2 $PROJECT_NAME 进程"
+echo "0) 退出脚本"
+read -p "输入选择 (1/2/3/0) : " choice
 
 # 检查 $PROJECT_NAME 是否在运行
 pm2 describe "$PROJECT_NAME" > /dev/null
@@ -48,12 +48,12 @@ case $choice in
     if [ $RUNNING -eq 0 ]; then
         stop_and_delete
     else
-        echo "$PROJECT_NAME 不在运行。"
+        echo "$PROJECT_NAME 没有在运行"
         exit 0
     fi
     ;;
   *)
-    echo "无效的选择。"
+    echo "无效的选择"
     exit 1
     ;;
 esac
