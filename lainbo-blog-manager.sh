@@ -19,7 +19,7 @@ cd "$PROJECT_PATH"
 
 echo "请选择要执行的操作："
 echo "1) 重新构建并启动 $PROJECT_NAME"
-echo "2) 拉取代码, 再执行`1)` $PROJECT_NAME"
+echo "2) 拉取代码, 再执行1) $PROJECT_NAME"
 echo "3) 停止并删除PM2 $PROJECT_NAME 进程"
 echo "0) 退出脚本"
 read -p "输入选择 (1/2/3/0) : " choice
