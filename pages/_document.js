@@ -23,7 +23,7 @@ class MyDocument extends Document {
                     if (fontUrl.endsWith('.css')) {
                       return <link key={index} rel="stylesheet" href={fontUrl} />
                     } else {
-                      return <link key={index} href={fontUrl} type="font/woff2" />
+                      return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
                     }
                   })}
                 </Head>
