@@ -73,6 +73,7 @@
 }
 html {
   scrollbar-gutter: stable;
+  font-family: var(--notion-font) !important;
 }
 html.dark {
   --c-scrollbar:#5f5f60;
