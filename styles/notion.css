@@ -1,4 +1,5 @@
 :root {
+  --notion-font:"Inter", "HarmonyOS Sans SC", "HarmonyOS_Regular", system-ui, "Segoe UI", Helvetica, "Twemoji Mozilla", "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !important;
   --c-scrollbar:#c9cdd4;
   --c-scrollbar-hover:#86909c;
   --c-scrollbar-track-piece:#fff;
