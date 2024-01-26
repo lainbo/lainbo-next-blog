@@ -441,6 +441,7 @@ summary > .notion-h {
   max-width: 100%;
   white-space: pre-wrap;
   word-break: break-word;
+  @apply font-serif;
 }
 
 .notion-h1 {
