@@ -73,12 +73,19 @@
 }
 html {
   scrollbar-gutter: stable;
-  font-family: var(--notion-font) !important;
+
 }
+
 html.dark {
   --c-scrollbar:#5f5f60;
   --c-scrollbar-hover:#929293;
   --c-scrollbar-track-piece:#101414;
+}
+
+html,
+body,
+html:lang(zh) body {
+  font-family: var(--notion-font) !important;
 }
 
 ::selection {
