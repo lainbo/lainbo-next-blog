@@ -8,7 +8,7 @@
 .notion-code,
 code[class*='language-'] {
   font-family: 'JetBrains Mono', 'Cascadia Mono', Menlo, Monaco, Consolas,
-  'HarmonyOS Sans SC Medium', 'HarmonyOS_Regular' !important;
+  'HarmonyOS Sans SC Regular', 'HarmonyOS_Regular' !important;
 }
 
 /*  */
