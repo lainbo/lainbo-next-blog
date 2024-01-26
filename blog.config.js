@@ -49,10 +49,10 @@ const BLOG = {
   FONT_URL: [
     // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
     'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap',
-    'https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
+    'https://font.alnk.cn/css2?family=JetBrains+Mono&display=swap',
+    'https://font.alnk.cn/css2?family=Libre+Baskerville&display=swap',
+    'https://font.alnk.cn/css2?family=Noto+Sans+SC:wght@300&display=swap',
+    'https://font.alnk.cn/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
