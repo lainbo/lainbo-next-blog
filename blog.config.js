@@ -52,7 +52,6 @@ const BLOG = {
     'https://font.alnk.cn/css2?family=Inter&display=swap',
     'https://font.alnk.cn/css2?family=JetBrains+Mono&display=swap',
     'https://font.alnk.cn/css2?family=Libre+Baskerville&display=swap',
-    'https://font.alnk.cn/css2?family=Noto+Sans+SC&display=swap',
     'https://font.alnk.cn/css2?family=Noto+Serif+SC&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
@@ -67,7 +66,6 @@ const BLOG = {
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Segoe UI"',
-    '"Noto Sans SC"',
     '"Helvetica Neue"',
     'Helvetica',
     '"Source Han Sans SC"',
