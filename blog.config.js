@@ -49,7 +49,7 @@ const BLOG = {
   FONT_URL: [
     // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
     'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
-    'https://font.alnk.cn/css2?family=Inter&display=swap',
+    'https://font.alnk.cn/css2?family=Inter:wght@450&display=swap',
     'https://font.alnk.cn/css2?family=JetBrains+Mono&display=swap',
     'https://font.alnk.cn/css2?family=Noto+Serif+SC&display=swap'
   ],
