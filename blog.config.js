@@ -76,11 +76,11 @@ const BLOG = {
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
     // 衬线字体 例如'LXGW WenKai'
-    '"Libre Baskerville"',
     '"Noto Serif SC"',
     '"Times New Roman"',
     'Times',
     'serif',
+    '"Twemoji Mozilla"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
     '"Apple Color Emoji"'
