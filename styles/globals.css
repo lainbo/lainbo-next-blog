@@ -99,13 +99,27 @@ nav {
 .scroll-hidden::-webkit-scrollbar {
   width: 0 !important;
 }
-
-.glassmorphism {
-  background: hsla(0, 0%, 100%, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+:root {
+  --page-header-bg: #fff;
 }
-
+html.dark {
+  --page-header-bg: #101414;
+}
+.glassmorphism {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); 
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--page-header-bg) 3.6px
+  );
+  background-size: 5px 5px !important;
+  @apply bg-[#fff] bg-opacity-30  dark:bg-opacity-0;
+}
+.matte-feather {
+  backdrop-filter: blur(8px);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject width='100%25' height='100%25'%3E%3Cbody class='wrap' xmlns='http://www.w3.org/1999/xhtml'%3E%3Cstyle%3E.wrap%7Bbox-sizing:border-box;margin:0;height:100%25;padding:10px%7D.shadow2%7Bheight:100%25;background:%23000;border-radius:10px;box-shadow:0 0 5px %23000,0 0 10px %23000,0 0 15px %23000%7D%3C/style%3E%3Cdiv class='shadow2'/%3E%3C/body%3E%3C/foreignObject%3E%3C/svg%3E");
+}
 
 .medium-zoom-overlay {
   background: none !important;

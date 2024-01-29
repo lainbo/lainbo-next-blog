@@ -49,13 +49,13 @@ export default function TopNavBar(props) {
             </Collapse>
 
             {/* 导航栏菜单 */}
-            <div className='flex w-full h-14 shadow glassmorphism bg-white dark:bg-hexo-black-gray px-7 items-between'>
+            <div className='flex w-full h-14 shadow glassmorphism px-2 items-between'>
 
                 {/* 左侧图标Logo */}
                 <LogoBar {...props} />
 
                 {/* 折叠按钮、仅移动端显示 */}
-                <div className='mr-1 flex md:hidden justify-end items-center space-x-4 font-serif dark:text-gray-200'>
+                <div className='mr-1 matte-feather px-3 flex md:hidden justify-end items-center space-x-4 font-serif dark:text-gray-200'>
                     <DarkModeButton className='flex text-md items-center h-full' />
                     <div onClick={toggleMenuOpen} className='cursor-pointer text-lg hover:scale-110 duration-150'>
                         {isOpen ? <i className='fas fa-times' /> : <i className="fa-solid fa-ellipsis-vertical"/>}
@@ -63,7 +63,7 @@ export default function TopNavBar(props) {
                 </div>
 
                 {/* 桌面端顶部菜单 */}
-                <div className='hidden md:flex'>
+                <div className='hidden matte-feather pr-4 md:flex 2xl:backdrop-filter-none'>
                     {links && links?.map((link, index) => <MenuItemDrop key={index} link={link} />)}
                     <DarkModeButton className='text-sm flex items-center h-full' />
                 </div>

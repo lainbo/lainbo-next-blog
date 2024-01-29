@@ -96,13 +96,14 @@ const SearchInput = ({ currentSearch, cRef, className }) => {
     <input
       ref={searchInputRef}
       type='text'
-      className={`${className} outline-none w-full text-sm pl-2 transition focus:shadow-lg font-light leading-10 text-black bg-gray-100 dark:bg-gray-900 dark:text-white`}
+      className={`${className} outline-none w-full text-sm pl-2 transition focus:shadow-lg font-light leading-10 text-black bg-[#f2f3f5] dark:bg-[#ffffff14] dark:text-white`}
       onKeyUp={handleKeyUp}
       onCompositionStart={lockSearchInput}
       onCompositionUpdate={lockSearchInput}
       onCompositionEnd={unLockSearchInput}
       onChange={e => updateSearchKey(e.target.value)}
       defaultValue={currentSearch}
+      placeholder='搜索文章标题'
     />
 
     <div className='flex -ml-8 cursor-pointer float-right items-center justify-center py-2'

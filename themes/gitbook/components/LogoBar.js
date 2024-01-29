@@ -16,14 +16,17 @@ export default function LogoBar(props) {
     changePageNavVisible(!pageNavVisible)
   }
   return (
-        <div id='top-wrapper' className='w-full flex items-center'>
-            <div onClick={togglePageNavVisible} className='cursor-pointer md:hidden text-xl pr-3 hover:scale-110 duration-150'>
-                <i className={`fa-solid ${pageNavVisible ? 'fa-align-justify' : 'fa-indent'}`}></i>
-            </div>
-            <Link href='/' className='flex text-md md:text-xl dark:text-gray-200'>
-                <LazyImage src={siteInfo?.icon} width={24} height={24} alt={siteConfig('AUTHOR')} className='mr-2 hidden md:block' />
-                {siteConfig('TITLE')}
-            </Link>
+    <div id='top-wrapper' className='w-full flex items-center'>
+      <div className="flex items-center matte-feather px-4 py-3 md:backdrop-filter-none">
+        <div onClick={togglePageNavVisible} className='cursor-pointer pr-3 md:hidden text-xl hover:scale-110 duration-150'>
+          <i className={`fa-solid ${pageNavVisible ? 'fa-align-justify' : 'fa-indent'}`}></i>
         </div>
+        <Link href='/' className='flex   text-md md:text-xl dark:text-gray-200'>
+          <LazyImage src={siteInfo?.icon} width={24} height={24} alt={siteConfig('AUTHOR')} className='mr-2 hidden md:block' />
+          {siteConfig('TITLE')}
+        </Link>
+      </div>
+
+    </div>
   )
 }

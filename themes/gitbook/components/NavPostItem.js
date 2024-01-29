@@ -21,12 +21,12 @@ const NavPostItem = (props) => {
     return <>
             <div
                 onClick={toggleOpenSubMenu}
-                className='select-none flex justify-between text-sm font-sans cursor-pointer p-2 hover:bg-gray-50 rounded-md dark:hover:bg-gray-600' key={group?.category}>
+                className='select-none flex justify-between text-sm font-sans cursor-pointer p-2 hover:bg-[#0000000f] dark:hover:bg-[#ffffff1f] rounded-md' key={group?.category}>
                 <span>{group?.category}</span>
                 <div className='inline-flex items-center select-none pointer-events-none '><i className={`px-2 fas fa-chevron-left transition-all duration-200 ${isOpen ? '-rotate-90' : ''}`}></i></div>
             </div>
             <Collapse isOpen={isOpen} onHeightChange={props.onHeightChange}>
-                {group?.items?.map(post => (<div key={post.id} className='ml-3 border-l'>
+                {group?.items?.map(post => (<div key={post.id} className='ml-3 border-l border-[#D9D9D9] dark:border-[#424242]'>
                     <BlogPostCard className='text-sm ml-3' post={post} /></div>))
                 }
             </Collapse>
