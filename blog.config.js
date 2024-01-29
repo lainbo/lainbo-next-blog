@@ -51,7 +51,6 @@ const BLOG = {
     'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
     'https://font.alnk.cn/css2?family=Inter&display=swap',
     'https://font.alnk.cn/css2?family=JetBrains+Mono&display=swap',
-    'https://font.alnk.cn/css2?family=Libre+Baskerville&display=swap',
     'https://font.alnk.cn/css2?family=Noto+Serif+SC&display=swap'
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
