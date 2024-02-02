@@ -172,14 +172,6 @@ const LayoutIndex = (props) => {
   const router = useRouter()
   useEffect(() => {
     router.push(siteConfig('GITBOOK_INDEX_PAGE', null, CONFIG)).then(() => {
-      if (isBrowser) {
-        const article = document.getElementById('notion-article')
-        if (!article) {
-          const containerInner = document.querySelector('#theme-gitbook #container-inner')
-          const newHTML = '<div>正在加载, 请稍候…</div>'
-          containerInner?.insertAdjacentHTML('afterbegin', newHTML)
-        }
-      }
       // console.log('跳转到指定首页', siteConfig('INDEX_PAGE', null, CONFIG))
       // setTimeout(() => {
       //   if (isBrowser) {
