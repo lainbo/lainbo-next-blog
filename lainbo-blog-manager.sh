@@ -4,7 +4,8 @@ PROJECT_PATH="/home/lainbo-next-blog"
 PROJECT_NAME="lainbo-blog"
 
 function rebuild_and_start {
-    echo "正在重新构建并启动 $PROJECT_NAME..."
+    echo "正在安装依赖构建并启动 $PROJECT_NAME..."
+    yarn install
     yarn build
     pm2 start yarn --name "$PROJECT_NAME" -- start
 }
@@ -18,7 +19,7 @@ function stop_and_delete {
 cd "$PROJECT_PATH"
 
 echo "请选择要执行的操作："
-echo "1) 重新构建并启动Blog"
+echo "1) 安装依赖构建并启动Blog"
 echo "2) 先拉代码, 再执行1"
 echo "3) 停止并删除PM2的 $PROJECT_NAME 进程"
 echo "0) 退出脚本"
