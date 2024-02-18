@@ -9,23 +9,26 @@ class MyDocument extends Document {
   }
 
   render() {
+    const stylesheetsCriteria = ['googleapis.com/css', 'font.alnk.cn', 's1.hdslb.com'];
     return (
             <Html lang={BLOG.LANG}>
                 <Head>
-                <link rel='icon' href= {`${BLOG.BLOG_FAVICON}`} />
-                  {/* 预加载字体 */}
-                  {BLOG.FONT_AWESOME && <>
-                      <link rel='preload' href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
-                      <link rel="stylesheet" href={BLOG.FONT_AWESOME} crossOrigin="anonymous" referrerPolicy="no-referrer" />
-                  </>}
+                    <link rel='icon' href={`${BLOG.BLOG_FAVICON}`} />
+                    {/* 预加载字体 */}
+                    {BLOG.FONT_AWESOME && <>
+                        <link rel='preload' href={BLOG.FONT_AWESOME} as="style" crossOrigin="anonymous" />
+                        <link rel="stylesheet" href={BLOG.FONT_AWESOME} crossOrigin="anonymous" referrerPolicy="no-referrer" />
+                    </>}
 
-                  {BLOG.FONT_URL?.map((fontUrl, index) => {
-                    if (fontUrl.endsWith('.css') || fontUrl.includes('googleapis.com/css')) {
-                      return <link key={index} rel="stylesheet" href={fontUrl} />
-                    } else {
-                      return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
-                    }
-                  })}
+                    {BLOG.FONT_URL?.map((fontUrl, index) => {
+                      const isStylesheet = fontUrl.endsWith('.css') || stylesheetsCriteria.some(criteria => fontUrl.includes(criteria));
+
+                      if (isStylesheet) {
+                        return <link key={index} rel="stylesheet" href={fontUrl} />;
+                      } else {
+                        return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" crossOrigin="anonymous" />;
+                      }
+                    })}
                 </Head>
 
                 <body className={`${BLOG.FONT_STYLE} dark:bg-black scroll-smooth`}>
