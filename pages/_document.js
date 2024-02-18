@@ -20,16 +20,15 @@ class MyDocument extends Document {
                   </>}
 
                   {BLOG.FONT_URL?.map((fontUrl, index) => {
-                    // if (fontUrl.endsWith('.css')) {
-                    //   return <link key={index} rel="stylesheet" href={fontUrl} />
-                    // } else {
-                    //   return <link key={index} href={fontUrl} type="font/woff2" />
-                    // }
-                    return <link key={index} rel="stylesheet" href={fontUrl} />
+                    if (fontUrl.endsWith('.css') || fontUrl.includes('googleapis.com/css')) {
+                      return <link key={index} rel="stylesheet" href={fontUrl} />
+                    } else {
+                      return <link key={index} rel="preload" href={fontUrl} as="font" type="font/woff2" />
+                    }
                   })}
                 </Head>
 
-                <body className={`${BLOG.FONT_STYLE} dark:bg-black font-light scroll-smooth`}>
+                <body className={`${BLOG.FONT_STYLE} dark:bg-black scroll-smooth`}>
                     <Main />
                     <NextScript />
                 </body>
