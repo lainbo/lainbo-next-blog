@@ -96,7 +96,7 @@ const LayoutBase = props => {
                 show={!onLoading}
                 appear={true}
                 enter='transition ease-in-out duration-700 transform order-first'
-                leave='transition ease-in-out duration-300 transform"
+                leave='transition ease-in-out duration-300 transform'
                 unmount={false}
             >
                 {headerSlot}
