@@ -102,7 +102,7 @@ const LayoutBase = (props) => {
         <ThemeGlobalGitbook.Provider value={{ searchModal, tocVisible, changeTocVisible, filteredNavPages, setFilteredNavPages, allNavPages, pageNavVisible, changePageNavVisible }}>
             <Style/>
 
-            <div id='theme-gitbook' className={`${siteConfig('FONT_STYLE')} scroll-smooth bg-white dark:bg-hexo-black-gray w-full h-full min-h-screen justify-center dark:text-gray-300`}>
+            <div id='theme-gitbook' className={`${siteConfig('FONT_STYLE')} scroll-smooth bg-white dark:bg-black w-full h-full min-h-screen justify-center dark:text-gray-300`}>
                 <AlgoliaSearchModal cRef={searchModal} {...props}/>
 
                 {/* 顶部导航栏 */}
@@ -344,7 +344,7 @@ const LayoutCategoryIndex = (props) => {
   const { categoryOptions } = props
   const { locale } = useGlobal()
   return <>
-     <div className='bg-white dark:bg-gray-700 py-10'>
+     <div className='bg-white dark:bg-gray-100 py-10'>
                 <div className='dark:text-gray-200 mb-5'>
                     <i className='mr-4 fas fa-th' />{locale.COMMON.CATEGORY}:
                 </div>
@@ -376,7 +376,7 @@ const LayoutTagIndex = (props) => {
   const { locale } = useGlobal()
 
   return <>
-     <div className="bg-white dark:bg-gray-700 py-10">
+     <div className="bg-white dark:bg-black py-10">
                 <div className="dark:text-gray-200 mb-5">
                     <i className="mr-4 fas fa-tag" />
                     {locale.COMMON.TAGS}:

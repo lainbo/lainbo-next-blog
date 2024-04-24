@@ -19,10 +19,8 @@ export const MenuItemDrop = ({ link }) => {
       {hasSubMenu && (
         <div
           className={
-            'px-2 h-full whitespace-nowrap duration-300 text-sm justify-between dark:text-gray-300 dark:hover:text-[#3c89e8] cursor-pointer flex flex-nowrap items-center ' +
-            (selected
-              ? 'bg-green-600 text-[#0958d9] hover:text-[#1677FF]'
-              : 'hover:text-green-600')
+            'px-2 h-full whitespace-nowrap duration-300 text-sm justify-between  dark:hover:text-[#3c89e8] cursor-pointer flex flex-nowrap items-center ' +
+            (selected ? 'text-[#0958d9]' : 'hover:text-[#1677FF]')
           }>
           <div>
             {link?.icon && <i className={link?.icon} />} {link?.name}
@@ -37,10 +35,8 @@ export const MenuItemDrop = ({ link }) => {
       {!hasSubMenu && (
         <div
           className={
-            'px-2 h-full whitespace-nowrap duration-150 text-sm justify-between  hover:text-[#4096ff] dark:text-gray-300 dark:hover:text-[#3c89e8] cursor-pointer flex flex-nowrap items-center ' +
-            (selected
-              ? 'bg-green-600 text-[#0958d9] dark:text-[#1677FF] hover:text-white'
-              : 'hover:text-green-600')
+            'px-2 h-full whitespace-nowrap duration-150 text-sm justify-between  hover:text-[#4096ff]  dark:hover:text-[#3c89e8] cursor-pointer flex flex-nowrap items-center ' +
+            (selected && 'text-[#0958D9] dark:text-[#1677FF]')
           }>
           <Link href={link?.to} target={link?.target}>
             {link?.icon && <i className={link?.icon} />} {link?.name}

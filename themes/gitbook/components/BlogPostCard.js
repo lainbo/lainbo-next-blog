@@ -12,7 +12,7 @@ const BlogPostCard = ({ post, className }) => {
   const url = checkContainHttp(post.slug) ? sliceUrlFromHttp(post.slug) : `${siteConfig('SUB_PATH', '')}/${post.slug}`
   return (
         <Link href={url} passHref>
-            <div key={post.id} className={`${className} relative py-1.5 cursor-pointer px-1.5 hover:bg-gray-50 rounded-md dark:hover:bg-gray-600  ${currentSelected ? 'bg-green-50 text-green-500 dark:bg-yellow-100 dark:text-yellow-600' : ''}`}>
+            <div key={post.id} className={`${className} relative py-1.5 cursor-pointer px-1.5 transition-all border border-transparent hover:bg-[#0000000f] hover:bg-gray-50 rounded-md dark:hover:bg-[#ffffff1f] rounded-md  ${currentSelected ? '!bg-[#e6f4ff] text-[#0958d9] !border-[#91caff] dark:!bg-[#111a2c] dark:text-[#3c89e8] dark:!border-[#15417e]' : ''}`}>
                 <div className="w-full select-none">
                     {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post?.pageIcon} />} {post.title}
                 </div>
