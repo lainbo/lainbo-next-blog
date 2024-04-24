@@ -9,7 +9,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    const stylesheetsCriteria = ['googleapis.com/css', 'font.alnk.cn', 's1.hdslb.com'];
     return (
       <Html lang={BLOG.LANG}>
         <Head>
