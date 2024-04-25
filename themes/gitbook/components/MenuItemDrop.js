@@ -38,8 +38,8 @@ export const MenuItemDrop = ({ link }) => {
             'px-2 h-full whitespace-nowrap duration-150 text-sm justify-between  hover:text-[#4096ff]  dark:hover:text-[#3c89e8] cursor-pointer flex flex-nowrap items-center ' +
             (selected && 'text-[#0958D9] dark:text-[#1677FF]')
           }>
-          <Link href={link?.to} target={link?.target}>
-            {link?.icon && <i className={link?.icon} />} {link?.name}
+          <Link className={'w-full h-full flex items-center justify-center'} href={link?.to} target={link?.target}>
+            {link?.icon && <div className={'mr-1'}><i className={link?.icon} /></div>} {link?.name}
           </Link>
         </div>
       )}
