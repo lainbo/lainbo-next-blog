@@ -60,8 +60,8 @@ const BLOG = {
   FONT_URL: [
     // 字体CSS 例如 https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css
     'https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css',
-    'https://fonts.bunny.net/css?family=inter:400&display=swap',
-    'https://fonts.bunny.net/css?family=jetbrains-mono:400&display=swap',
+    'https://use.sevencdn.com/css?family=Inter&display=swap',
+    'https://use.sevencdn.com/css2?family=JetBrains+Mono&display=swap',
   ],
   // 无衬线字体 例如'"LXGW WenKai"'
   FONT_SANS: [
@@ -164,8 +164,8 @@ const BLOG = {
   // 代码主题 @see https://github.com/PrismJS/prism-themes
   PRISM_THEME_PREFIX_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_PREFIX_PATH || 'https://npm.elemecdn.com/prismjs@1.29.0/themes/prism-okaidia.css', // 代码块默认主题
   PRISM_THEME_SWITCH: process.env.NEXT_PUBLIC_PRISM_THEME_SWITCH || true, // 是否开启浅色/深色模式代码主题切换； 开启后将显示以下两个主题
-  PRISM_THEME_LIGHT_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_LIGHT_PATH || 'https://cdnjs.onmicrosoft.cn/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css', // 浅色模式主题
-  PRISM_THEME_DARK_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_DARK_PATH || 'https://cdnjs.onmicrosoft.cn/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css', // 深色模式主题
+  PRISM_THEME_LIGHT_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_LIGHT_PATH || 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism-themes/1.9.0/prism-vsc-dark-plus.min.css', // 浅色模式主题
+  PRISM_THEME_DARK_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_DARK_PATH || 'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism-themes/1.9.0/prism-vsc-dark-plus.min.css', // 深色模式主题
 
   CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // 代码左上角显示mac的红黄绿图标
   CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || false, // 是否显示行号
@@ -178,11 +178,11 @@ const BLOG = {
   // Mermaid 图表CDN
   MERMAID_CDN:
     process.env.NEXT_PUBLIC_MERMAID_CDN ||
-    'https://cdnjs.onmicrosoft.cn/ajax/libs/mermaid/10.2.4/mermaid.min.js', // CDN
+    'https://s4.zstatic.net/ajax/libs/mermaid/10.2.4/mermaid.min.js', // CDN
   // QRCodeCDN
   QR_CODE_CDN:
     process.env.NEXT_PUBLIC_QR_CODE_CDN ||
-    'https://cdnjs.onmicrosoft.cn/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
+    'https://s4.zstatic.net/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
 
   BACKGROUND_LIGHT: '#eeeeee', // use hex value, don't forget '#' e.g #fffefc
   BACKGROUND_DARK: '#000000', // use hex value, don't forget '#'
@@ -282,7 +282,7 @@ const BLOG = {
   MUSIC_PLAYER_LRC_TYPE: process.env.NEXT_PUBLIC_MUSIC_PLAYER_LRC_TYPE || '0', // 歌词显示类型，可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）（前提是有配置歌词路径，对 meting 无效）
   MUSIC_PLAYER_CDN_URL:
         process.env.NEXT_PUBLIC_MUSIC_PLAYER_CDN_URL ||
-        'https://cdnjs.onmicrosoft.cn/ajax/libs/aplayer/1.10.1/APlayer.min.js',
+        'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js',
   MUSIC_PLAYER_ORDER: process.env.NEXT_PUBLIC_MUSIC_PLAYER_ORDER || 'list', // 默认播放方式，顺序 list，随机 random
   MUSIC_PLAYER_AUDIO_LIST: [
     // 示例音乐列表。除了以下配置外，还可配置歌词，具体配置项看此文档 https://aplayer.js.org/#/zh-Hans/
@@ -319,10 +319,10 @@ const BLOG = {
   COMMENT_ARTALK_SERVER: process.env.NEXT_PUBLIC_COMMENT_ARTALK_SERVER || '', // ArtalkServert后端地址 https://artalk.js.org/guide/deploy.html
   COMMENT_ARTALK_JS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_JS ||
-    'https://cdnjs.onmicrosoft.cn/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
+    'https://s4.zstatic.net/ajax/libs/artalk/2.5.5/Artalk.js', // ArtalkServert js cdn
   COMMENT_ARTALK_CSS:
     process.env.NEXT_PUBLIC_COMMENT_ARTALK_CSS ||
-    'https://cdnjs.onmicrosoft.cn/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
+    'https://s4.zstatic.net/ajax/libs/artalk/2.5.5/Artalk.css', // ArtalkServert css cdn
 
   // twikoo
   COMMENT_TWIKOO_ENV_ID: process.env.NEXT_PUBLIC_COMMENT_ENV_ID || '', // TWIKOO后端地址 腾讯云环境填envId；Vercel环境填域名，教程：https://tangly1024.com/article/notionnext-twikoo
@@ -330,7 +330,7 @@ const BLOG = {
     process.env.NEXT_PUBLIC_COMMENT_TWIKOO_COUNT_ENABLE || false, // 博客列表是否显示评论数
   COMMENT_TWIKOO_CDN_URL:
     process.env.NEXT_PUBLIC_COMMENT_TWIKOO_CDN_URL ||
-    'https://cdn.staticfile.org/twikoo/1.6.17/twikoo.min.js', // twikoo客户端cdn
+    'https://s4.zstatic.net/ajax/libs/twikoo/1.6.17/twikoo.min.js', // twikoo客户端cdn
 
   // utterance
   COMMENT_UTTERRANCES_REPO:
@@ -498,7 +498,7 @@ const BLOG = {
   // ANIMATE.css 动画
   ANIMATE_CSS_URL:
     process.env.NEXT_PUBLIC_ANIMATE_CSS_URL ||
-    'https://cdnjs.onmicrosoft.cn/ajax/libs/animate.css/4.1.1/animate.min.css', // 动画CDN
+    'https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate.css/4.1.1/animate.min.css', // 动画CDN
 
   // 网站图片
   IMG_LAZY_LOAD_PLACEHOLDER:
